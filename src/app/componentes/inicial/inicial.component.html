@@ -1,3 +1,7 @@
+<br>
+<br>
+<br>
+
 <div id="carouselBanner" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button
@@ -73,15 +77,15 @@
 
 <div class="row row-cols-1 row-cols-md-3 g-4" style="background-color: black">
     
-  <div class="col" *ngFor="let produto of produtos">
-    <div class="card h-100">
+  <div class="col " *ngFor="let produto of produtos">
+    <div class="card h-95 " style ="margin:5px">
       <img
         src="assets/produtos/{{ produto.fotos[0] }}"
         class="card-img-top"
         [alt]="produto.nome"
       />
-      <div class="card-body">
-        <p class="card-text">
+      <div class="card-body ">
+        <p class="card-text text-center">
           {{ produto.nome }}
         </p>
         <h5 class="text-center">
@@ -93,7 +97,8 @@
               <i class="bi bi-plus-lg"></i> Detalhes
             </a>
           &nbsp;
-          <button type="button" class="btn btn-outline-primary">
+          <button type="button" class="btn btn-outline-primary"
+          (click)="adicionarCarrinho(produto)">
             <i class="bi bi-cart">Carrinho</i>
           </button>
         </p>
