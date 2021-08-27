@@ -31,8 +31,6 @@ export class CheckoutComponent implements OnInit {
 }
 
 get total(){
-  return this.carrinhoService.total;
-}
 pagar($event: any) {
   $event.preventDefault();
   alert(JSON.stringify(this.form.value));
