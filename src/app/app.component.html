@@ -33,7 +33,7 @@
         >
           <li class="dropdown-item" *ngIf="quantidade === 0">Carrinho vazio</li>
           <li class="dropdown-item" *ngFor="let item of itens">
-            {{ item.produto.preco | currency: "BRL" }} ({{ item.quantidade }}x)
+            {{ item.quantidade }} x {{ item.produto.preco | currency: "BRL" }} 
             - {{ item.produto.nome.substr(0, 20) }}...
           </li>
         </ul>
