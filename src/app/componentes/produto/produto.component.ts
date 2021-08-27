@@ -21,8 +21,9 @@ export class ProdutoComponent implements OnInit {
               private carrinhoService: CarrinhoService){}
 
   ngOnInit(): void {
-    const id = +this.route.snapshot.params['id'];
-    this.produto = this.produtoService.listarId(id);
+    this.route.params.subscribe(routeParams =>{
+      this.produto= this.produtoService.listarId(+routeParams.id);
+    });
   }
   
   adicionarCarrinho(){
