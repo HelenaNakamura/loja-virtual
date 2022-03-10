@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  gerenciador-tarefas:
+    image: helenanakamura/loja-virtual
+    build: .
+    ports:
+      - 4200:80
