@@ -22,7 +22,8 @@ export class ProdutoComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe(routeParams =>{
-      this.produto= this.produtoService.listarId(+routeParams.id);
+      this.produto= this.produtoService.listarId(+routeParams.id); // + indica para converter em numero, retorna string
+      
     });
   }
   
